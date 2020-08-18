@@ -1,4 +1,5 @@
 import pygame
+import numpy as np
 from grid import Grid
 
 def map_mouse_to_board(x,y,l,r,t,b):
@@ -109,45 +110,7 @@ currentSign = ['X','O']
 currentColor = [(255,0,0),(0,0,255)]
 curIndex = 0
 
-board = [
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]],
-
-		[[None,None,None],
-		[None,None,None],
-		[None,None,None]]
-		]
-
-
+board = np.full((9,3,3),None)
 board_status = [None,None,None,None,None,None,None,None,None]
 surface.fill((0,0,0))
 grid.draw(surface)
