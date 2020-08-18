@@ -111,7 +111,7 @@ currentColor = [(255,0,0),(0,0,255)]
 curIndex = 0
 
 board = np.full((9,3,3),None)
-board_status = [None,None,None,None,None,None,None,None,None]
+board_status = np.full(9,None)
 surface.fill((0,0,0))
 grid.draw(surface)
 for g in smallGrid:
