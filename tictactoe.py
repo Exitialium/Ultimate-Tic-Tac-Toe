@@ -2,6 +2,9 @@ import pygame
 import numpy as np
 
 class GameModel:
+    def getHash(self,board):
+        boardHash = str(board.reshape(9 * 3 * 3))
+        return boardHash
 	def map_mouse_to_board(self,x,y,l,r,t,b):
 		bigPosX = -1
 		bigPosY = -1
